@@ -7,27 +7,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>مرحبًا في متجر MASTER Gold</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="#admin">لوحة الإدارة</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
+
+    <!-- Main Section -->
+    <main id="home">
+        <section id="hero">
+            <h1>مرحبًا في متجر MASTER Gold</h1>
+            <p>أفضل مكان لشراء شحنات الألعاب والتطبيقات بأفضل الأسعار</p>
+            <a href="#products" class="cta-btn">استعرض منتجاتنا</a>
+        </section>
+
+        <!-- Products Section -->
         <section id="products">
             <h2>المنتجات</h2>
-            <div class="product">
+            <div class="product" data-product="pb">
+                <img src="product1.jpg" alt="شدة ببجي">
                 <h3>شدة ببجي</h3>
-                <p>سعر: 50 ليرة سورية</p>
-                <button>شراء</button>
+                <label for="quantity">اختر الكمية:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+                <p>سعر: <span id="price-pb">50</span> ليرة سورية</p>
+                <button class="buy-btn" onclick="addToCart('pb')">شراء الآن</button>
             </div>
-            <div class="product">
+            <div class="product" data-product="ff">
+                <img src="product2.jpg" alt="شدة فري فاير">
                 <h3>شدة فري فاير</h3>
-                <p>سعر: 60 ليرة سورية</p>
-                <button>شراء</button>
+                <label for="quantity">اختر الكمية:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+                <p>سعر: <span id="price-ff">60</span> ليرة سورية</p>
+                <button class="buy-btn" onclick="addToCart('ff')">شراء الآن</button>
             </div>
         </section>
+
+        <!-- Admin Section -->
+        <section id="admin">
+            <h2>لوحة الإدارة</h2>
+            <form id="admin-form">
+                <label for="product">اختر المنتج:</label>
+                <select id="product">
+                    <option value="pb">شدة ببجي</option>
+                    <option value="ff">شدة فري فاير</option>
+                </select>
+                <br>
+                <label for="quantity-admin">الكمية:</label>
+                <input type="number" id="quantity-admin" name="quantity-admin" min="1" max="100" value="1">
+                <br>
+                <button type="button" onclick="updateProductInfo()">تحديث المعلومات</button>
+            </form>
+        </section>
+
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 MASTER Gold Store. جميع الحقوق محفوظة.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
