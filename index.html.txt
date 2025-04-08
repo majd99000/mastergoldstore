@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER Gold Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>مرحبًا في متجر MASTER Gold</h1>
+    </header>
+    <main>
+        <section id="products">
+            <h2>المنتجات</h2>
+            <div class="product">
+                <h3>شدة ببجي</h3>
+                <p>سعر: 50 ليرة سورية</p>
+                <button>شراء</button>
+            </div>
+            <div class="product">
+                <h3>شدة فري فاير</h3>
+                <p>سعر: 60 ليرة سورية</p>
+                <button>شراء</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MASTER Gold Store. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
